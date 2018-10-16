@@ -1,0 +1,123 @@
+/* @mixin background-retina($filename, $fileformat) {
+	background-image: url("../img/${filename}$1x.${fileformat}");
+
+	$media: $retina-dpi, $retina-ppx {
+		background-image: url("../img/${filename}$2x.${fileformat}");
+	}
+}
+ */
+
+/*______ Main Fonts ______*/
+
+/*______ SourceSansPro ______*/
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url("../fonts/SourceSansPro/SourceSansPro-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url("../fonts/SourceSansPro/SourceSansPro-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url("../fonts/SourceSansPro/SourceSansPro-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*______ Merriweather ______*/
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather/Merriweather-BlackItalic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+
+/*______ Elements ______*/
+
+body,
+table {
+  font-family: "SourceSansPro";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  -webkit-transition: fill .3s linear;
+  -o-transition: fill .3s linear;
+  -moz-transition: fill .3s linear;
+  transition: fill .3s linear;
+}
+
+html.uk-touch body *.uk-invisible {
+  display: block !important;
+  opacity: 1 !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  animation: none !important;
+  visibility: visible !important;
+}
+
+.uk-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.test {
+  font-family: "Merriweather";
+  font-size: 60px;
+  color: #323232;
+}
+
+/*______ PAGE HEADER ______*/
+
+/*______ Page Content ______*/
+
+/*______ PAGE FOOTER ______*/
+
+/*______ SLIDERS ______*/
+
+/*______ MODALS WINDOWS ______*/
+
+/*______ FORMS ______*/
+
+@media (min-width: 0px) {
+  html.uk-touch body [class*=uk-animation-] {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-container {
+    padding: 0 15px;
+  }
+}

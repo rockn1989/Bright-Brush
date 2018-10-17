@@ -7,8 +7,6 @@
 }
  */
 
-/*______ Main Fonts ______*/
-
 /*______ SourceSansPro ______*/
 
 @font-face {
@@ -41,14 +39,168 @@
   font-weight: 900;
 }
 
+/*______ Icomoon ______*/
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?7o3i8s");
+  src: url("../fonts/icomoon/icomoon.eot?7o3i8s#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?7o3i8s") format("truetype"), url("../fonts/icomoon/icomoon.woff?7o3i8s") format("woff"), url("../fonts/icomoon/icomoon.svg?7o3i8s#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+  content: "\e900";
+}
+
+.icon-vk:before {
+  content: "\e901";
+}
+
+.icon-inst:before {
+  content: "\e902";
+}
+
+.icon-youtube:before {
+  content: "\e903";
+}
+
+.icon-search:before {
+  content: "\e904";
+}
+
+.icon-menu:before {
+  content: "\e905";
+}
+
+.icon-play-button:before {
+  content: "\e906";
+  color: #ac1542;
+}
+
 /*______ Elements ______*/
 
+h1,
+.title-h1 {
+  font-family: "Merriweather";
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 900;
+  color: #323232;
+}
+
+.btn {
+  padding: 0 15px;
+  min-width: 210px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  vertical-align: top;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: #fa5503;
+}
+
+.btn:hover {
+  background-color: #c84402;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.play-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 130px;
+  height: 130px;
+  font-size: 30px;
+  line-height: 130px;
+  text-align: center;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #ffffff;
+}
+
+.play-btn:before {
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.play-btn:hover {
+  text-decoration: none;
+  background-color: #ac1542;
+}
+
+.play-btn:hover:before {
+  color: #ffffff;
+}
+
+.soc-links {
+  margin: 0 10%;
+  -webkit-transition: margin .3s ease;
+  -o-transition: margin .3s ease;
+  -moz-transition: margin .3s ease;
+  transition: margin .3s ease;
+}
+
+.soc-links a {
+  margin-right: 20px;
+  display: inline-block;
+  color: #000000;
+  font-size: 20px;
+}
+
+.soc-links a.icon-vk {
+  font-size: 21px;
+}
+
+.soc-links a:last-child {
+  margin-right: 0;
+}
+
+.soc-links a:before {
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.soc-links a:hover {
+  text-decoration: none;
+}
+
+.soc-links a:hover:before {
+  color: #ac1542;
+}
+
+html,
 body,
 table {
   font-family: "SourceSansPro";
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  color: #1b181a;
 }
 
 * {
@@ -88,17 +240,316 @@ html.uk-touch body *.uk-invisible {
 .uk-container {
   margin: 0 auto;
   max-width: 1200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.test {
-  font-family: "Merriweather";
-  font-size: 60px;
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #ffffff;
+  -webkit-transition: all .3s ease .3s;
+  -o-transition: all .3s ease .3s;
+  -moz-transition: all .3s ease .3s;
+  transition: all .3s ease .3s;
+}
+
+.preloader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.preloader.loaded {
+  opacity: 0;
+  z-index: -1;
+}
+
+.preloader.loaded img {
+  -webkit-transform: translate(-60%, -50%);
+  -moz-transform: translate(-60%, -50%);
+  -ms-transform: translate(-60%, -50%);
+  transform: translate(-60%, -50%);
+  opacity: 0;
+}
+
+/*______ Header ______*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 900;
+}
+
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: -1;
+  -webkit-transition: width .6s ease-out .3s;
+  -o-transition: width .6s ease-out .3s;
+  -moz-transition: width .6s ease-out .3s;
+  transition: width .6s ease-out .3s;
+}
+
+.header .uk-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 63%;
+  -ms-flex-preferred-size: 63%;
+  flex-basis: 63%;
+}
+
+.header .uk-container > div {
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header .tel a {
+  color: #1b181a;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.header .soc-links {
+  line-height: 75px;
+}
+
+.header .logo,
+.header .btn {
+  display: inline-block;
+}
+
+.header .logo {
+  float: left;
+}
+
+.header .btn {
+  float: right;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform .2s linear .9s;
+  transition: -webkit-transform .2s linear .9s;
+  -o-transition: transform .2s linear .9s;
+  -moz-transition: transform .2s linear .9s, -moz-transform .2s linear .9s;
+  transition: transform .2s linear .9s;
+  transition: transform .2s linear .9s, -webkit-transform .2s linear .9s, -moz-transform .2s linear .9s;
+}
+
+.header.animate:before {
+  width: 100%;
+}
+
+.header.animate .logo__img {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.header.animate .btn {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.logo {
+  min-width: 200px;
+  line-height: 70px;
+}
+
+.logo__img {
+  position: relative;
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  float: left;
+  text-align: center;
+  background-color: #ac1542;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  -o-transition: transform .2s ease;
+  -moz-transition: transform .2s ease, -moz-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease, -moz-transform .2s ease;
+}
+
+.logo__slogan {
   color: #323232;
+  font-family: "Merriweather";
+  font-weight: 900;
 }
 
-/*______ PAGE HEADER ______*/
+.logo a:hover {
+  text-decoration: none;
+}
+
+.main-nav {
+  display: inline-block;
+  width: 58%;
+}
+
+.main-nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav ul li {
+  height: 70px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+}
+
+.main-nav ul li a {
+  color: #1b181a;
+}
+
+.main-nav ul li.active a {
+  color: #ac1542;
+  font-weight: 700;
+}
 
 /*______ Page Content ______*/
+
+body.main-page {
+  overflow: hidden;
+}
+
+.main-page {
+  height: 100vh;
+}
+
+.main-page__inner {
+  position: relative;
+  padding-top: 220px;
+  height: 100%;
+  z-index: 100;
+  color: #ffffff;
+}
+
+.main-page__inner .uk-container {
+  position: relative;
+  padding-bottom: 70px;
+  height: 100%;
+}
+
+.main-page__inner .title-h1 {
+  font-size: 80px;
+  line-height: 100px;
+  color: #ffffff;
+}
+
+.main-page__inner .slogan {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  max-width: 50%;
+}
+
+.main-page__inner .seo-text {
+  position: absolute;
+  bottom: 70px;
+  left: 15px;
+  opacity: 0.8;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.main-page .bg-phone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+}
+
+.main-page .bg-phone img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.main-page .play-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 /*______ PAGE FOOTER ______*/
 

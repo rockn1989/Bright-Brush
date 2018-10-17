@@ -2,6 +2,14 @@
 
 $(function() {	
 
+	/*______ Preloader ______*/
+
+	$('.preloader').addClass('loaded');
+	$('.preloader').on('transitionend', function () {
+		$('header.header').addClass('animate');
+	});
+	
+
 	/*______ Показывать форму на мобильных устройствах ______*/
 
 	var $mobileForm = $('.mobile-form');

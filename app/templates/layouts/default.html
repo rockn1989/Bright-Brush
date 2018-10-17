@@ -1,10 +1,13 @@
 {% include "../includes/head.html" %}
-<body>
+<body class="{{mainPage}}">
+<div class="preloader">
+	<img src="https://via.placeholder.com/200x200" alt="">
+</div>
 {% include "../includes/header.html" %}
 	
 {% block content %}{% endblock %}
 
-{% include "../includes/footer.html" %}
+<!-- {% include "../includes/footer.html" %} -->
 
 {% include "../includes/modals.html" %}
 

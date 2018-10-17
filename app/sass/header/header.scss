@@ -1,1 +1,119 @@
-/*______ PAGE HEADER ______*/
+/*______ Header ______*/
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: transparent;
+	overflow: hidden;
+	z-index: 900;
+	@include clearfix;
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0%;
+		height: 100%;
+		background-color: #ffffff;
+		z-index: -1;
+		transition: width .6s ease-out .3s;
+	}
+	.uk-container {
+		display: flex;
+		justify-content: space-between;
+		flex-basis: 63%;
+		&>div {
+			height: 70px;
+			line-height: 70px;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	.tel {
+		a {
+			color: $black;
+			font-size: 21px;
+			font-weight: 700;
+		}
+	}
+	.soc-links {
+		line-height: 75px;
+	}
+	.logo, .btn {
+		display: inline-block;
+	}
+	.logo {
+		float: left;
+	}
+	.btn {
+		float: right;
+		transform: translateX(100%);
+		transition: transform .2s linear .9s;
+	}
+	&.animate {
+		&:before {
+			width: 100%;
+		}
+		.logo__img {
+			transform: translateX(0);
+		}
+		.btn {
+			transform: translateX(0);
+		}
+	}
+}
+
+.logo {
+	min-width: 200px;
+	line-height: 70px;
+	&__img {
+		position: relative;
+		margin-right: 20px;
+		width: 70px;
+		height: 70px;
+		line-height: 70px;
+		float: left;
+		text-align: center;
+		background-color: #ac1542;
+		transform: translateX(-100%);
+		transition: transform .2s ease;
+	}
+	&__slogan {
+		color: #323232;
+		font-family: $boldFont;
+		font-weight: 900;
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.main-nav {
+	display: inline-block;
+	width: 58%;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		@include list-reset;
+		li {
+			height: 70px;
+			display: flex;
+			align-items: center;
+			vertical-align: top;
+			a {
+				color: $black;
+			}
+			&.active {
+				a {
+					color: $orange;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

@@ -14,20 +14,52 @@ body {
 		height: 100%;
 		z-index: 100;
 		color: #ffffff;
+		@media (min-width: $desk-w) {
+			padding-top: 140px;
+		};
+		@media (min-width: 1600px) {
+			padding-top: 220px;
+		}
 		.uk-container {
 			position: relative;
 			padding-bottom: 70px;
 			height: 100%;
+			@media (min-width: 1366px) {
+				max-width: 63%;	
+			}
 		}
 		.title-h1 {
 			font-size: 80px;
 			line-height: 100px;
 			color: #ffffff;
+			transform: translateY(75px);
+			opacity: 0;
+			transition: transform 1.15s 1s, opacity 1.15s 1s ease;
+			@media (min-width: $desk-w) {
+				font-size: 50px;
+				line-height: 70px;
+			};
+			@media (min-width: 1600px) {
+				font-size: 80px;
+				line-height: 100px;
+			}
 		}
 		.slogan {
-			margin-top: 40px;
-			margin-bottom: 70px;
 			max-width: 50%;
+			transform: translateY(75px);
+			opacity: 0;
+			transition: transform 1.15s 1.2s, opacity 1.15s 1.2s ease;
+			@media (min-width: $desk-w) {
+				margin: 20px 0 50px;
+			};
+			@media (min-width: 1600px) {
+				margin: 40px 0 70px;
+			}
+		}
+		.btn {
+			transform: translateY(75px);
+			opacity: 0;
+			transition: transform 1.15s 1.6s, opacity 1.15s 1.6s ease;
 		}
 		.seo-text {
 			position: absolute;
@@ -37,6 +69,23 @@ body {
 			font-size: 16px;
 			line-height: 20px;
 			font-weight: 300;
+			transform: translateY(75px);
+			opacity: 0;
+			transition: transform 1.15s 1.8s, opacity 1.15s 1.8s ease;
+			@media (min-width: $desk-w) {
+				text-indent: -9999px;
+				width: 1px;
+				visibility: hidden;
+			};
+			@media (min-width: 1600px) {
+				text-indent: 0;
+				width: auto;
+				visibility: visible;
+				bottom: 20px;	
+			}
+			@media (min-width: 1600px) {
+				bottom: 70px;
+			}
 		}
 	}
 	.bg-phone {
@@ -56,5 +105,36 @@ body {
 		position: absolute;
 		top: 0;
 		right: 0;
+		transform: translateX(100%);
+		opacity: 0;
+		transition: transform 1.15s .4s, opacity 1.15s .8s ease;
+		@media (min-width: $desk-w) {
+			right: 15px;
+		};
+		@media (min-width: 1600px) {
+			right: 0;
+		}
+	}
+	&.animate {
+		.play-btn {
+			transform: translateX(0);
+			opacity: 1;
+		}
+		.title-h1 {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.slogan {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.btn {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.seo-text {
+			transform: translateY(0);
+			opacity: .8;
+		}
 	}
 }

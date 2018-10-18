@@ -4,8 +4,6 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: flex;
-	justify-content: space-between;
 	width: 100%;
 	background-color: transparent;
 	overflow: hidden;
@@ -19,12 +17,23 @@
 		height: 100%;
 		background-color: #ffffff;
 		z-index: -1;
-		transition: width .6s ease-out .3s;
+		transition: width .9s ease .3s;
+	}
+	.header-desk {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 	.uk-container {
 		display: flex;
 		justify-content: space-between;
 		flex-basis: 63%;
+		@media (min-width: $desk-w) {
+			flex-basis: 80%;
+		};
+		@media (min-width: 1366px) {
+			flex-basis: 63%;
+		}
 		&>div {
 			height: 70px;
 			line-height: 70px;
@@ -37,10 +46,28 @@
 			color: $black;
 			font-size: 21px;
 			font-weight: 700;
+			white-space: nowrap;
+			@media (min-width: $desk-w) {
+				font-size: 16px;
+			};
+			@media (min-width: 1366px) {
+				font-size: 21px;
+			}
 		}
 	}
 	.soc-links {
+		margin: 0 10%;
 		line-height: 75px;
+		white-space: nowrap;
+		@media (min-width: $desk-w) {
+			margin: 0 3%;
+		};
+		@media (min-width: 1366px) {
+			margin: 0 5%;
+		}
+		@media (min-width: 1600px) {
+			margin: 0 10%;
+		}
 	}
 	.logo, .btn {
 		display: inline-block;
@@ -48,10 +75,18 @@
 	.logo {
 		float: left;
 	}
-	.btn {
+	.wrapper-btn {
 		float: right;
 		transform: translateX(100%);
-		transition: transform .2s linear .9s;
+		transition: transform .3s ease .9s;
+	}
+	.btn {
+		@media (min-width: $desk-w) {
+			min-width: 140px;
+		};
+		@media (min-width: 1366px) {
+			min-width: 210px;
+		}
 	}
 	&.animate {
 		&:before {
@@ -60,15 +95,26 @@
 		.logo__img {
 			transform: translateX(0);
 		}
-		.btn {
+		.wrapper-btn {
 			transform: translateX(0);
 		}
 	}
 }
 
 .logo {
-	min-width: 200px;
 	line-height: 70px;
+	@media (min-width: $mob-xs) {
+		width: 70px;
+		min-width: auto;
+	}
+	@media (min-width: 1366px) {
+		width: auto;
+		min-width: 200px;
+	}
+	a {
+		display: block;
+		@include clearfix;
+	}
 	&__img {
 		position: relative;
 		margin-right: 20px;
@@ -85,6 +131,12 @@
 		color: #323232;
 		font-family: $boldFont;
 		font-weight: 900;
+		@media (min-width: $desk-w) {
+			display: none;
+		};
+		@media (min-width: 1366px) {
+			display: block;
+		}
 	}
 	a {
 		&:hover {
@@ -95,10 +147,17 @@
 
 .main-nav {
 	display: inline-block;
-	width: 58%;
+	
+	@media (min-width: $desk-w) {
+		width: 70%;
+	};
+	@media (min-width: 1366px) {
+		width: 58%;
+	}
 	ul {
 		display: flex;
 		justify-content: space-between;
+		white-space: nowrap;
 		@include list-reset;
 		li {
 			height: 70px;
@@ -107,6 +166,12 @@
 			vertical-align: top;
 			a {
 				color: $black;
+				@media (min-width: $desk-w) {
+					font-size: 14px;
+				};
+				@media (min-width: 1366px) {
+					font-size: 16px;
+				}
 			}
 			&.active {
 				a {

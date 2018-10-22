@@ -1,16 +1,17 @@
 {% extends "layouts/default.html" %}
 {% set title="Цены" %}
 {% set bread = ["Главная", "Цены"] %}
+{% set textAlign = "uk-text-center" %}
 {% block content %}
 
 <div class="content">
 	{% include 'includes/breadcrumbs.html' %}
 	<div class="uk-container">
-		<h1 class="title-h1 uk-text-center">Цены</h1>
-		<div class="price-text">
+		<h1 class="title-h1 uk-text-center uk-invisible " uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">Цены</h1>
+		<div class="price-text uk-invisible " uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate ex ac dui pulvinar, euismod venenatis odio consectetur. Integer sit amet lacinia risus. Donec nisl velit, dictum eu blandit lacinia, tempus ut nulla. Nulla tincidunt, neque ac fringilla porta, elit nisl vulputate augue, semper consectetur nibh nisi sed diam. Sed laoreet fringilla dolor. Cras leo sapien, dignissim ut urna quis, dignissim porta elit. Quisque sit amet nunc non felis egestas aliquet. Pellentesque egestas, enim sed lacinia vulputate, libero neque luctus ex, faucibus varius velit velit in tortor. Sed at amet.
 		</div>
-		<div class="price-table">
+		<div class="price-table uk-invisible " uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
 			<div class="table-title uk-text-center">Художественная роспись</div>
 			<div class="overflow-container">
 				<table>

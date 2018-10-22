@@ -1,0 +1,54 @@
+/*______ Page Business ______*/
+
+.business-wrapper {
+	position: relative;
+	margin-top: 160px;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		height: 100%;
+		width: 0;
+		background-color: rgba(155, 155, 155, 0.05);
+		transition: width .6s ease 1.8s;
+		z-index: 1;
+	}
+}
+
+.business-list-links {
+	@include list-reset;
+	margin-left: 35%;
+	position: relative;
+	z-index: 10;
+	li {
+		a {
+			color: $orange;
+			font-size: 24px;
+			line-height: 40px;
+			font-weight: 400;
+			text-decoration: underline;
+		}
+	}
+}
+
+.business-patners-list {
+	@include list-reset;
+	position: relative;
+	margin-top: 120px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 11;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		filter: grayscale(100%);
+		transition: filter .3s ease;
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}

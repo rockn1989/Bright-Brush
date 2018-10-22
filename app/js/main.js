@@ -6,7 +6,7 @@ $(function() {
 
 	$('.preloader').addClass('loaded');
 	$('.preloader').on('transitionend', function () {
-		$('header.header, .main-page').addClass('animate');
+		$('header.header, body').addClass('animate');
 	});
 	
 

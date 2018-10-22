@@ -1,0 +1,43 @@
+{% extends "layouts/default.html" %}
+{% set title="Цены" %}
+{% set bread = ["Главная", "Для бизнеса"] %}
+{% set textAlign = "uk-text-left remove-margin-bottom" %}
+{% block content %}
+
+<div class="content">
+	<div class="uk-container">
+		<div class="business-wrapper">
+			<ul class="breadcrumbs uk-text-left remove-margin-bottom uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">
+				<li><a href="">Главная</a></li>
+				<li>Для бизнеса</li>
+			</ul>
+			<h1 class="title-h1 uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">Для бизнеса</h1>
+			<div class="uk-grid">
+				<div class="uk-width-1-2@m">
+					<p class="uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
+						Художественная студия Брайт Браш на 4 летнем опыте знает, что способность понять, а затем воплотить идею в жизнь, есть не что иное, как доставить удовольствие разуму и сердцу. Рисунок стоит тысячи слов. Изображения мы воспринимаем гораздо быстрее, чем слова, и запоминаем надолго. Рисунок – это не только самовыражение, это целый невербальный язык, который работает как эффективный инструмент рекламы в бизнесе. Перевоплощает, раскрывает по-иному жилые пространства.  
+					</p>
+				</div>
+				<div class="uk-width-1-2@m">
+					<ul class="business-list-links uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
+						<li><a href="#">Для архитекторов</a></li>
+						<li><a href="#">Для сетевых компаний</a></li>
+						<li><a href="#">Для госкомпаний</a></li>
+					</ul>
+				</div>
+				<div class="uk-width-1-1">
+					<ul class="business-patners-list uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1600">
+						<li><img src="img/business-img-1.png" alt="KFC"></li>
+						<li><img src="img/business-img-2.png" alt="Yum"></li>
+						<li><img src="img/business-img-3.png" alt="354"></li>
+						<li><img src="img/business-img-4.png" alt="Райффайзен Банк"></li>
+						<li><img src="img/business-img-5.png" alt="ArtPeople"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}

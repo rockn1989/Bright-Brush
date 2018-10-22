@@ -7,10 +7,40 @@ body {
 		overflow: hidden;
 		background-color: transparent;
 	}
+	&.animate {
+		.main-play-btn-wrapper {
+			transform: translateX(0);
+			opacity: 1;
+		}
+		.title-h1 {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.slogan {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.main-btn-wrapper {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.seo-text {
+			transform: translateY(0);
+			opacity: .8;
+		}
+		.business-wrapper {
+			&:after {
+				width: 50%;
+			}
+		}
+		.slide-up {
+			animation: slide-up 1.3s ease forwards;
+		}
+	}
 }
 
 .content {
-	padding-top: 70px;
+	padding: 70px 0;
 }
 
 .main-page {
@@ -129,28 +159,6 @@ body {
 	}
 	.play-btn {
 		transition: background-color .3s ease;
-	}
-	&.animate {
-		.main-play-btn-wrapper {
-			transform: translateX(0);
-			opacity: 1;
-		}
-		.title-h1 {
-			transform: translateY(0);
-			opacity: 1;
-		}
-		.slogan {
-			transform: translateY(0);
-			opacity: 1;
-		}
-		.main-btn-wrapper {
-			transform: translateY(0);
-			opacity: 1;
-		}
-		.seo-text {
-			transform: translateY(0);
-			opacity: .8;
-		}
 	}
 }
 

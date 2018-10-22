@@ -1,11 +1,46 @@
 /*______ Elements ______*/
 
 h1,.title-h1 {
+	margin-bottom: 40px;
 	font-family: $boldFont;
 	font-size: 60px;
 	line-height: 60px;
 	font-weight: 900;
 	color: #323232;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	thead {
+		td {
+			color: #9297a1;
+			&:first-child {
+				padding-left: 40px;
+			}
+		}
+	}
+	td {
+		padding: 10px 0;
+		color: #4b4b4b;
+		font-family: $boldFont;
+		font-weight: 700;
+		border-bottom: 1px solid #9297a1;
+	}
+	tbody {
+		tr {
+			&:last-child {
+				td {
+					border: none;
+				}
+			}
+			td {
+				&:first-child {
+					padding-left: 40px;
+				}
+			}
+		}
+	}
 }
 
 .btn {

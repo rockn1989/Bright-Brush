@@ -22,3 +22,12 @@
 		transform: translateY(0);
 	}
 }
+
+@keyframes scale-140deg {
+	0% {
+		transform: tranlate(0, 0);
+	}
+	100% {
+		transform: translate(45px, 75px)
+	}
+}

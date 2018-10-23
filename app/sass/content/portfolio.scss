@@ -1,0 +1,51 @@
+/*______ Page Portfolio ______*/
+
+.portfolio-wrapper {
+	.breadcrumbs {
+		margin: 75px 0 10px !important;
+	}
+	h1,.title-h1 {
+		margin-top: 0;
+	}
+	.text-block {
+		padding-top: 20px;
+	}
+}
+
+.portfolio-filter {
+	position: relative;
+	margin-top: -80px;
+	padding: 150px 0 10px;
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		height: 100%;
+		width: 0;
+		background-color: rgba(155, 155, 155, 0.05);
+		transition: width .8s ease 1.8s;
+		z-index: 1;
+	}
+	a {
+		@include anim-border;
+		margin: 0 30px 15px;
+		position: relative;
+		color: #7f7f7f;
+		line-height: 20px;
+		word-wrap: nowrap;
+		z-index: 20;
+		&.active {
+			color: #ac1542;
+			&:after {
+				background-color: #ac1542;
+				width: 100%;
+			}
+		}
+	}
+}

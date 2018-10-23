@@ -33,6 +33,11 @@ body {
 				width: 50%;
 			}
 		}
+		.portfolio-filter {
+			&:after {
+				width: 100%;
+			}
+		}
 		.slide-up {
 			animation: slide-up 1.3s ease forwards;
 		}

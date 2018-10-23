@@ -100,17 +100,3 @@ html.uk-touch {
 .remove-margin-bottom {
 	margin-bottom: 0 !important;
 }
-
-/*______ Animation ______*/
-
-
-@keyframes slide-up {
-	0% {
-		opacity: 0;
-		transform: translateY(50px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}

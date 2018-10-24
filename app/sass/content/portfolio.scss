@@ -15,6 +15,7 @@
 .portfolio-filter {
 	position: relative;
 	margin-top: -80px;
+	margin-bottom: 30px;
 	padding: 150px 0 10px;
 	display: flex;
 	width: 100%;
@@ -40,12 +41,34 @@
 		line-height: 20px;
 		word-wrap: nowrap;
 		z-index: 20;
+		font-weight: 400;
+		font-family: $boldFont;
 		&.active {
 			color: #ac1542;
 			&:after {
 				background-color: #ac1542;
 				width: 100%;
 			}
+		}
+	}
+}
+
+.portfolio-list {
+	.portfolio-item {
+		&:hover {
+			text-decoration: none;
+		}
+		.img-wrapper {
+			margin-bottom: 10px;
+			display: block;
+		}
+		.subtitle {
+			color: #000000;
+			font-size: 24px;
+			line-height: 32px;
+			font-weight: 900;
+			font-family: $boldFont;
+			letter-spacing: -0.24px;
 		}
 	}
 }

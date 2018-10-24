@@ -130,6 +130,7 @@
 	&__slogan {
 		color: #323232;
 		font-family: $boldFont;
+		font-style: italic;
 		font-weight: 900;
 		@media (min-width: $desk-w) {
 			display: none;

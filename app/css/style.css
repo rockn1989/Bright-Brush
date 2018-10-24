@@ -34,8 +34,22 @@
 
 @font-face {
   font-family: 'Merriweather';
-  src: url("../fonts/Merriweather/Merriweather-BlackItalic.woff2") format("woff2");
+  src: url("../fonts/Merriweather/Merriweather-Regular.woff2") format("woff2");
   font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather/Merriweather-Black.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather/Merriweather-BlackItalic.woff2") format("woff2");
+  font-style: italic;
   font-weight: 900;
 }
 
@@ -103,6 +117,7 @@ h1,
   font-size: 60px;
   line-height: 60px;
   font-weight: 900;
+  font-style: italic;
   color: #323232;
 }
 
@@ -123,7 +138,8 @@ table td {
   padding: 10px 0;
   color: #4b4b4b;
   font-family: "Merriweather";
-  font-weight: 700;
+  font-weight: 900;
+  font-style: italic;
   border-bottom: 1px solid #9297a1;
 }
 
@@ -684,6 +700,7 @@ html.uk-touch body *.uk-invisible {
 .logo__slogan {
   color: #323232;
   font-family: "Merriweather";
+  font-style: italic;
   font-weight: 900;
 }
 
@@ -1002,6 +1019,7 @@ body.animate .slide-up {
 .portfolio-filter {
   position: relative;
   margin-top: -80px;
+  margin-bottom: 30px;
   padding: 150px 0 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1044,6 +1062,8 @@ body.animate .slide-up {
   line-height: 20px;
   word-wrap: nowrap;
   z-index: 20;
+  font-weight: 400;
+  font-family: "Merriweather";
 }
 
 .portfolio-filter a:after {
@@ -1076,6 +1096,24 @@ body.animate .slide-up {
 .portfolio-filter a.active:after {
   background-color: #ac1542;
   width: 100%;
+}
+
+.portfolio-list .portfolio-item:hover {
+  text-decoration: none;
+}
+
+.portfolio-list .portfolio-item .img-wrapper {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.portfolio-list .portfolio-item .subtitle {
+  color: #000000;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 900;
+  font-family: "Merriweather";
+  letter-spacing: -0.24px;
 }
 
 /*______ Page Business ______*/

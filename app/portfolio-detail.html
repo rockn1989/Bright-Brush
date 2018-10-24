@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>О нас</title>
+	<title>Роспись стены</title>
 	<meta property="og:url" content="">
 	<meta property="og:type" content="Article">
 	<meta property="og:site_name" content="">
@@ -67,21 +67,64 @@
 
 	<div class="content">
 		<div class="uk-container">
-			<div class="about-us-wrapper">
-				<div class="uk-grid">
+			<div class="portfolio-detail"> 
+				<a href="portfolio.html" class="backpage-btn icon-arrow-left uk-invisible" uk-scrollspy="cls: uk-invisible slide-left; delay: 1600"></a>
+				<div class="uk-grid uk-grid-small">
 					<div class="uk-width-1-2@m">
 						<ul class="breadcrumbs uk-text-left remove-margin-top remove-margin-bottom uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">
 							<li><a href="">Главная</a></li>
-							<li>О нас</li>
+							<li><a href="">Портфолио</a></li>
+							<li>Роспись стены</li>
 						</ul>
-						<h1 class="title-h1 uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">Bright Brush</h1>
+						<h1 class="title-h1 uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">Роспись стены</h1>
 						<div class="text-block uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
 							Художественная студия Брайт Браш на 4 летнем опыте знает, что способность понять, а затем воплотить идею в жизнь, есть не что иное, как доставить удовольствие разуму и сердцу. Рисунок стоит тысячи слов. Изображения мы воспринимаем гораздо быстрее, чем слова, и запоминаем надолго. Рисунок – это не только самовыражение, это целый невербальный язык, который работает как эффективный инструмент рекламы в бизнесе. Перевоплощает, раскрывает по-иному жилые пространства.  
 						</div>
+						<div class="bold-link-wrapper uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1600">
+							<a href="#order-modal" class="bold-link" uk-toggle>Заказать похожую</a>
+						</div>
+						<div class="page-controller uk-invisible" uk-scrollspy="cls: uk-invisible slide-left; delay: 1600">
+							<div class="elem arrow">
+								<a href="" class="icon-arrow-left"></a>
+							</div>
+							<div class="elem sqad">
+								<a href="portfolio.html" class="icon-sqad"></a>
+							</div>
+							<div class="elem arrow">
+								<a href="" class="icon-arrow-right"></a>
+							</div>
+							<div class="elem text">
+								<a href="" class="next-page">Следующая работа</a>
+							</div>
+						</div>
 					</div>	
 					<div class="uk-width-1-2@m">
-						<div class="img-wrapper uk-invisible" uk-scrollspy="cls: uk-invisible scale-140deg slide-up; delay: 1400">
-							<img src="img/abous-img.png" alt="">
+						<div class="slider-wrapper uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
+							<div class="detail-slider">
+
+								<div class="slider">
+									<div class="slide"><img src="img/portfolio-detail-img.png" alt=""></div>
+									<div class="slide"><img src="img/portfolio-detail-img.png" alt=""></div>
+									<div class="slide"><img src="img/portfolio-detail-img.png" alt=""></div>
+									<div class="slide"><img src="img/portfolio-detail-img.png" alt=""></div>
+									<div class="slide"><img src="img/portfolio-detail-img.png" alt=""></div>
+								</div>
+
+								<div class="progress-bar">
+									<div class="progress-bar__load"></div>
+								</div>
+
+								<div class="slider__arrow">
+									<div class="slide-prev"><i class="icon-arrow-left"></i></div>
+									<div class="slide-next"><i class="icon-arrow-right"></i></div>
+								</div>
+
+								<div class="counter">
+									<div class="counter__current-slide"></div>
+									<div class="counter__all-slides"></div>
+								</div>
+
+							</div>
 						</div>
 					</div>
 				</div>

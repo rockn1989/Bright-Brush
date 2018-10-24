@@ -68,6 +68,27 @@ table {
 	}
 }
 
+.backpage-btn {
+	position: absolute;
+	color: #000000;
+	font-size: 28px;
+	@media (min-width: $desk-w) {
+		top: -40px;
+		left: 0;
+	};
+	@media (min-width: 1366px) {
+		top: -2px;
+		left: -5%;
+	};
+	@media (min-width: 1600px) {
+		left: -17%;
+	}
+	&:hover {
+		text-decoration: none;
+		color: $orange;
+	}
+}
+
 .play-btn {
 	display: inline-block;
 	vertical-align: top;
@@ -117,9 +138,23 @@ table {
 
 .text-block {
 	position: relative;
+	margin-bottom: 30px;
 	font-weight: 300;
 	line-height: 30px;
 	z-index: 400;
+}
+
+.bold-link {
+	font-size: 21px;
+	line-height: 30px;
+	color: $orange;
+	font-family: $boldFont;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: underline;
+	&:hover {
+		color: $orange;
+	}
 }
 
 /*______ Breadcrumbs ______*/
@@ -154,3 +189,48 @@ table {
 }
 
 
+/*______ Page Controller ______*/
+
+.page-controller {
+	font-size: 0;
+	.elem {
+		margin-right: 35px;
+		display: inline-block;
+		vertical-align: top;
+		&.arrow {
+			font-size: 18px;
+		}
+		&.sqad {
+			font-size: 20px;
+		}
+		&.text {
+			font-size: 18px;
+			line-height: 1;
+		}
+		a {
+			color: rgba(0, 0, 0, 0.8);
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+.progress-bar {
+	position: relative;
+	width: 100%;
+	height: 10px;
+	background-color: #955182;
+	&__load {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0%;
+		height: 10px;
+		background-color: #804670;
+		transition-property: width;
+		transition-timing-function: ease;
+		z-index: 30;
+	}
+}

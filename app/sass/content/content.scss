@@ -3,6 +3,7 @@
 body {
 	min-height: 100vh;
 	background-color: #fafafa;
+	overflow-x: hidden;
 	&.main-page {
 		overflow: hidden;
 		background-color: transparent;
@@ -40,6 +41,9 @@ body {
 		}
 		.slide-up {
 			animation: slide-up 1.3s ease forwards;
+		}
+		.slide-left {
+			animation: slide-left 1.3s ease forwards;
 		}
 	}
 }

@@ -10,20 +10,19 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			left: 0;
+			right: 0;
 			display: block;
-			width: 100%;
+			width: 0;
 			height: 100%;
 			background-color: rgba(155, 155, 155, 0.09);
-			transition: transform 1s ease .8s;
-			transform: translate(45px, 75px);
+			transition: width .8s ease .8s;
 		}
 		img {
 			transform: translate(45px, 75px);
 		}
 		&.scale-140deg {
 			&:before {
-				transform: translate(0, 0);
+				width: 100%;
 			}
 		}
 	}

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon/icomoon.eot?7o3i8s');
-  src:  url('../fonts/icomoon/icomoon.eot?7o3i8s#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.ttf?7o3i8s') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff?7o3i8s') format('woff'),
-    url('../fonts/icomoon/icomoon.svg?7o3i8s#icomoon') format('svg');
+  src:  url('../fonts/icomoon/icomoon.eot?kr5tio');
+  src:  url('../fonts/icomoon/icomoon.eot?kr5tio#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?kr5tio') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?kr5tio') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?kr5tio#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,4 +45,11 @@
 .icon-play-button:before {
   content: "\e906";
   color: #ac1542;
+}
+.icon-sqad:before {
+  content: "\e907";
+  color: #ac1542;
+}
+.icon-arrow-right:before {
+  content: "\e908";
 }

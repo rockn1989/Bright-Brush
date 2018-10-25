@@ -31,3 +31,13 @@
 		transform: translate(45px, 75px)
 	}
 }
+
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(2);
+	}
+}

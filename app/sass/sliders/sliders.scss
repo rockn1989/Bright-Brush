@@ -13,11 +13,26 @@
 		background-color: rgba(155, 155, 155, 0.09);
 		transform: translate(100px, 85px)
 	}
+	.slider {
+		position: relative;
+		z-index: 200;
+	}
 	.slide {
 		overflow: hidden;
 		img {
-			transition-property: transform;
-			transition-timing-function: ease;
+		}
+		&.imgPlay {
+			img {
+				animation-name: scale;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+			}
+		}
+		&.pause {
+			img {
+				animation-play-state: paused;
+				animation-duration: 8s;
+			}
 		}
 	}
 }

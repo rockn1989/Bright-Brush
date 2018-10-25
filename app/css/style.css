@@ -632,6 +632,44 @@ html.uk-touch body *.uk-invisible {
   }
 }
 
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+@-moz-keyframes scale {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
 /*______ Header ______*/
 
 .header {
@@ -1374,21 +1412,34 @@ body.animate .slide-left {
   transform: translate(100px, 85px);
 }
 
+.detail-slider .slider {
+  position: relative;
+  z-index: 200;
+}
+
 .detail-slider .slide {
   overflow: hidden;
 }
 
-.detail-slider .slide img {
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  -moz-transition-property: transform, -moz-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform, -moz-transform;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
+.detail-slider .slide.imgPlay img {
+  -webkit-animation-name: scale;
+  -moz-animation-name: scale;
+  animation-name: scale;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.detail-slider .slide.pause img {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
+  -webkit-animation-duration: 8s;
+  -moz-animation-duration: 8s;
+  animation-duration: 8s;
 }
 
 .slider__arrow {

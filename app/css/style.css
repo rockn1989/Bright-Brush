@@ -348,6 +348,8 @@ table tbody tr td:first-child {
 /*______ Page Controller ______*/
 
 .page-controller {
+  position: absolute;
+  bottom: -50px;
   font-size: 0;
 }
 
@@ -1257,8 +1259,11 @@ body.animate .slide-left {
 /*______ Page Portfolio Detail ______*/
 
 .portfolio-detail {
-  position: relative;
   margin-top: 150px;
+}
+
+.portfolio-detail .uk-container {
+  position: relative;
 }
 
 /*______ Page Business ______*/
@@ -1437,9 +1442,9 @@ body.animate .slide-left {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   animation-play-state: paused;
-  -webkit-animation-duration: 8s;
-  -moz-animation-duration: 8s;
-  animation-duration: 8s;
+  -webkit-animation-duration: 12s;
+  -moz-animation-duration: 12s;
+  animation-duration: 12s;
 }
 
 .slider__arrow {
@@ -1631,7 +1636,7 @@ body.animate .slide-left {
 
 @media (min-width: 1600px) {
   .backpage-btn {
-    left: -17%;
+    left: -15%;
   }
 
   .header .soc-links {

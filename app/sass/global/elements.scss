@@ -81,7 +81,7 @@ table {
 		left: -5%;
 	};
 	@media (min-width: 1600px) {
-		left: -17%;
+		left: -15%;
 	}
 	&:hover {
 		text-decoration: none;
@@ -192,6 +192,8 @@ table {
 /*______ Page Controller ______*/
 
 .page-controller {
+	position: absolute;
+	bottom: -50px;
 	font-size: 0;
 	.elem {
 		margin-right: 35px;

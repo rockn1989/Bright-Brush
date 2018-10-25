@@ -1,8 +1,10 @@
 /*______ Page Portfolio Detail ______*/
 
 .portfolio-detail {
-	position: relative;
 	margin-top: 150px;
+	.uk-container {
+		position: relative;
+	}
 	.text-block {
 		@media (min-width: $desk-w) {
 			padding-right: 15%;

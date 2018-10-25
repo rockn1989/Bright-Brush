@@ -5,7 +5,7 @@ $(function () {
 		$detailSlider = $('.detail-slider .slider'),
 		$detailSlide = '';
 		$progressBar = $('.progress-bar__load'),
-		playSpeed = 8000;
+		playSpeed = 12000;
 
 		$.each($('.detail-slider .slider img'), function (i, el) {
 			el.style.animationDuration = playSpeed/1000+'s';
@@ -50,7 +50,7 @@ $(function () {
 		infinity: true,
 		cssEase: 'linear',
 		autoplay: true,
-		fade: false,
+		fade: true,
 		autoplaySpeed: playSpeed,
 		speed: 500,
 		slidesToShow: 1,
@@ -94,7 +94,6 @@ $(function () {
 			playSpeed);
 	}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 		$detailSlide = $detailSlider.find('.slide.slick-current');
-		$detailSlide.addClass('pause');
 		$detailSlide.removeClass('imgPlay');
 	});
 });

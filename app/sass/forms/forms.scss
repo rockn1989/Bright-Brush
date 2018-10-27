@@ -1,1 +1,70 @@
 /*______ FORMS ______*/
+
+form {
+	fieldset {
+		margin: 0 0 15px;
+		padding: 0;
+		border: none;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"] {
+		width: 100%;
+		border: none;
+		height: 40px;
+		border-bottom: 1px solid #d4d4d4;
+		outline: none;
+	}
+	label {
+		margin-top: 20px;
+		&.politics {
+			display: block;
+			font-size: 14px;
+		}
+	}
+}
+
+label {
+	margin-top: 25px;
+	display: block;
+	cursor: pointer;
+	input[type="checkbox"] {
+		display: none;
+		&:checked ~.custom-checkbox {
+			&:after {
+				border-color: #fa5503;
+				transform: rotate(45deg) scale(1);
+			}
+		}
+	}
+}
+
+.custom-checkbox {
+	position: relative;
+	margin-right: 12px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	border: 1px solid #fa5503;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 7px;
+		top: 3px;
+		width: 3px;
+		height: 9px;
+		border-bottom: 1px solid transparent;
+		border-right: 1px solid transparent;
+		transform: rotate(45deg) scale(0);
+		transition: all .3s ease;
+	}
+}
+
+.custom-label {
+	display: block;
+	color: #4a4a4a;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	overflow: hidden;
+}

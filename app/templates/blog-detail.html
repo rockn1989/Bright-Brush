@@ -1,0 +1,21 @@
+{% extends "layouts/default.html" %}
+{% set title="Покраска стен под арт-работу" %}
+{% set bread = ["Главная","Блог", "Покраска стен под арт-работу"] %}
+{% set textAlign = "uk-text-center" %}
+{% block content %}
+<div class="content">
+	<div class="text-page">
+		{% include 'includes/breadcrumbs.html' %}
+		<div class="uk-container">
+			<a href="blog.html" class="backpage-btn icon-arrow-left uk-invisible" uk-scrollspy="cls: uk-invisible slide-left; delay: 1600"></a>
+			<h1 class="title-h1 uk-text-center uk-invisible " uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">Покраска стен под арт-работу</h1>
+			<p class="uk-invisible " uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate ex ac dui pulvinar, euismod venenatis odio consectetur. Integer sit amet lacinia risus. Donec nisl velit, dictum eu blandit lacinia, tempus ut nulla. Nulla tincidunt, neque ac fringilla porta, elit nisl vulputate augue, semper consectetur nibh nisi sed diam. Sed laoreet fringilla dolor. Cras leo sapien, dignissim ut urna quis, dignissim porta elit. Quisque sit amet nunc non felis egestas aliquet. Pellentesque egestas, enim sed lacinia vulputate, libero neque luctus ex, faucibus varius velit velit in tortor. Sed at amet.
+			</p>
+			<div class="uk-invisible " uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
+				<img class="lazy" data-src="img/blog-inner-img.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

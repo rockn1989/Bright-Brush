@@ -36,12 +36,12 @@
 		}
 		&>div {
 			height: 70px;
-			line-height: 70px;
 			display: inline-block;
 			vertical-align: top;
 		}
 	}
 	.tel {
+		line-height: 70px;
 		a {
 			color: $black;
 			font-size: 21px;
@@ -57,7 +57,7 @@
 	}
 	.soc-links {
 		margin: 0 10%;
-		line-height: 75px;
+		line-height: 80px;
 		white-space: nowrap;
 		@media (min-width: $desk-w) {
 			margin: 0 3%;
@@ -67,6 +67,9 @@
 		}
 		@media (min-width: 1600px) {
 			margin: 0 10%;
+		}
+		a.icon-youtube {
+			font-size: 24px;
 		}
 	}
 	.logo, .btn {

@@ -96,4 +96,23 @@ $(function () {
 		$detailSlide = $detailSlider.find('.slide.slick-current');
 		$detailSlide.removeClass('imgPlay');
 	});
+
+
+	/*______ Business patners slider  ______*/
+
+	$('.business-patners-slider .slider').slick({
+		arrows: false,
+		dots: false,
+		infinity: true,
+		cssEase: 'linear',
+		autoplay: false,
+		fade: false,
+		autoplaySpeed: 3000,
+		speed: 500,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		adaptiveHeight: true
+	})
+
+
 });

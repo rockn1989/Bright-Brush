@@ -1,18 +1,15 @@
 {% extends "layouts/default.html" %}
 {% set title="О нас" %}
 {% set bread = ["Главная", "О нас"] %}
-{% set textAlign = "uk-text-center" %}
+{% set textAlign = "uk-text-left" %}
 {% block content %}
 
 	<div class="content">
-		<div class="uk-container">
-			<div class="about-us-wrapper">
+		<div class="about-us-wrapper">
+			<div class="uk-container">
 				<div class="uk-grid">
 					<div class="uk-width-1-2@m">
-						<ul class="breadcrumbs uk-text-left remove-margin-top remove-margin-bottom uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">
-							<li><a href="">Главная</a></li>
-							<li>О нас</li>
-						</ul>
+						{% include 'includes/breadcrumbs.html' %}
 						<h1 class="title-h1 uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">Bright Brush</h1>
 						<div class="text-block uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
 							Художественная студия Брайт Браш на 4 летнем опыте знает, что способность понять, а затем воплотить идею в жизнь, есть не что иное, как доставить удовольствие разуму и сердцу. Рисунок стоит тысячи слов. Изображения мы воспринимаем гораздо быстрее, чем слова, и запоминаем надолго. Рисунок – это не только самовыражение, это целый невербальный язык, который работает как эффективный инструмент рекламы в бизнесе. Перевоплощает, раскрывает по-иному жилые пространства.  

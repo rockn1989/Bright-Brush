@@ -1,5 +1,23 @@
 /*______ Animation ______*/
 
+@keyframes pseudo-element-anim-width {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes pseudo-element-anim-width-half {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 50%;
+	}
+}
+
 @keyframes slide-left {
 	0% {
 		opacity: 0;

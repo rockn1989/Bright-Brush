@@ -44,9 +44,47 @@ html.uk-touch {
   margin: 0 auto;
   max-width: $containerWidth;
   box-sizing: border-box;
+  &--large {
+  	max-width: 1800px;
+  }
   @media (min-width: $desk-w) {
   	padding: 0 15px;
   };
+}
+
+.uk-lightbox {
+	background: rgba(0, 0, 0, .5);
+}
+
+.uk-lightbox-button {
+	background-color: transparent;
+	@include icomoon;
+	color: #ffffff;
+	opacity: 1;
+	font-size: 24px;
+	&.uk-slidenav-previous {
+		&:before {
+			content: "\e900";
+		}
+	}
+	&.uk-slidenav-next {
+		&:before {
+			content: "\e908";
+		}
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	svg {
+		display: none;
+	}
+}
+
+.uk-lightbox-toolbar {
+	background-color: transparent;
+	* {
+		color: #ffffff;
+	}
 }
 
 .preloader {

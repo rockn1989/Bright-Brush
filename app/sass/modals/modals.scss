@@ -1,1 +1,37 @@
 /*______ MODALS WINDOWS ______*/
+
+.default-modal {
+	padding: 0;
+	.uk-modal-dialog {
+		position: relative;
+		margin: 0 0 0 auto;
+		height: 100%;
+		width: 50%;
+		.uk-close {
+			right: auto;
+			top: 20px;
+			left: 20px;
+			svg {
+				width: 30px;
+				height: 30px;
+				color: $orange;
+			}
+		}
+	}
+	.title-h2 {
+		margin-bottom: 70px;
+	}
+	.btn {
+		margin-top: 40px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.modal-body-inner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		max-width: 500px;
+		transform: translate(-50%, -50%);
+	}
+}

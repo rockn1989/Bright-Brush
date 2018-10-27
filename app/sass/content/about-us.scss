@@ -2,30 +2,6 @@
 
 .about-us-wrapper {
 	margin-top: 240px;
-	.img-wrapper {
-		position: relative;
-		margin-top: -150px;
-		display: inline-block;
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			display: block;
-			width: 0;
-			height: 100%;
-			background-color: rgba(155, 155, 155, 0.09);
-			transition: width .8s ease .8s;
-		}
-		img {
-			transform: translate(45px, 75px);
-		}
-		&.scale-140deg {
-			&:before {
-				width: 100%;
-			}
-		}
-	}
 	p {
 		padding-right: 5%;
 		font-weight: 300;

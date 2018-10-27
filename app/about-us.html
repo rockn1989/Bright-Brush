@@ -38,7 +38,7 @@
 		<div class="uk-container">
 			<nav class="main-nav">
 				<ul>
-					<li class="active"><a href="services.html">Услуги</a></li>
+					<li><a href="services.html">Услуги</a></li>
 					<li><a href="portfolio.html">Портфолио</a></li>
 					<li><a href="business.html">Для Бизнеса</a></li>
 					<li><a href="price.html">Цены</a></li>
@@ -66,14 +66,19 @@
 	
 
 	<div class="content">
-		<div class="uk-container">
-			<div class="about-us-wrapper">
+		<div class="about-us-wrapper">
+			<div class="uk-container">
 				<div class="uk-grid">
 					<div class="uk-width-1-2@m">
-						<ul class="breadcrumbs uk-text-left remove-margin-top remove-margin-bottom uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">
-							<li><a href="">Главная</a></li>
-							<li>О нас</li>
-						</ul>
+						<!-- begin breadcrumbs-wrapper -->
+<div class="breadcrumbs-wrapper">
+	<div class="uk-container">
+		<ul class="breadcrumbs uk-invisible uk-text-left" uk-scrollspy="cls: uk-invisible slide-up; delay: 1000">
+			<li><a href="">Главная</a></li>
+			<li>О нас</li></ul>
+	</div>
+</div>
+<!-- end breadcrumbs-wrapper -->
 						<h1 class="title-h1 uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">Bright Brush</h1>
 						<div class="text-block uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
 							Художественная студия Брайт Браш на 4 летнем опыте знает, что способность понять, а затем воплотить идею в жизнь, есть не что иное, как доставить удовольствие разуму и сердцу. Рисунок стоит тысячи слов. Изображения мы воспринимаем гораздо быстрее, чем слова, и запоминаем надолго. Рисунок – это не только самовыражение, это целый невербальный язык, который работает как эффективный инструмент рекламы в бизнесе. Перевоплощает, раскрывает по-иному жилые пространства.  
@@ -107,23 +112,29 @@
     </div>
 </div>
 
-<div id="callback-modal" class="default-modal uk-flex-top uk-modal" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-    	<button type="button" class="uk-modal-close-default icon-close uk-close" uk-close>
-    	</button>
-        <div class="title-h2">Оставить заявку</div>
-				<form action="" class="application-form">
-					<input type="text" placeholder="Имя">
-					<input type="text" placeholder="Номер телефона" class="js__input-phone">
-					<button type="submit" class="btn">Отправить</button>
-					<label for="politics">
-						<input id="politics" type="checkbox">
-						<span class="custom-checkbox"></span>
-						<span class="custom-label">
-							Я ознакомлен и согласен с условиями обработки данных
-						</span>
-					</label>
-				</form>
+<div id="callback-modal" class="default-modal callback-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body ">
+			<button type="button" class="uk-modal-close-default icon-close uk-close" uk-close>
+			</button>
+			<div class="modal-body-inner">
+				        <div class="title-h2">Напишите нам</div>
+								<form action="" class="application-form">
+									<fieldset>
+										<input type="text" placeholder="Ваше Имя">
+									</fieldset>
+									<fieldset>
+										<input type="text" placeholder="Телефон для связи" class="js__input-phone">
+									</fieldset>
+									<button type="submit" class="btn">Отправить</button>
+									<label for="politics" class="politics">
+										<input id="politics" type="checkbox">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">
+											Я ознакомлен и согласен с условиями обработки данных
+										</span>
+									</label>
+								</form>
+			</div>
     </div>
 </div>
 
@@ -132,7 +143,8 @@
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
-<script src="libs/svg4everybody.min.js" defer></script>
+<script src="libs/lazyLoad/jquery.lazy.min.js" defer></script>
+<script src="libs/lazyLoad/jquery.lazy.plugins.min.js" defer></script>
 <script src="libs/ofi.min.js" defer></script>
 <script src="js/slider.js" defer></script>
 <script src="js/main.js" defer></script>

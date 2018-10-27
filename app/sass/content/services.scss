@@ -1,0 +1,61 @@
+
+/*______ Page Services ______*/
+
+.services-wrapper {
+	margin-top: 75px;
+	.text-block {
+		padding-top: 20px;
+	}
+}
+
+.title-h1 {
+	margin-top: 0;
+}
+
+
+.services-list-wrapper {
+	position: relative;
+	margin-top: -80px;
+	margin-bottom: 30px;
+	padding: 150px 0 50px;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		height: 100%;
+		width: 0;
+		background-color: rgba(155, 155, 155, 0.05);
+		transition: width .8s ease 1.8s;
+		z-index: 1;
+	}
+}
+
+.services-list {
+	position: relative;
+	@include list-reset;
+	column-count: 4;
+	z-index: 50;
+	li {
+		margin-bottom: 25px;
+		a {
+			line-height: 20px;
+			font-weight: 400;
+			font-family: $boldFont;
+			text-decoration: underline;
+			color: $orange;
+		}
+	}
+}
+
+
+.services-detail-wrapper {
+	margin-top: 130px;
+	.uk-container {
+		position: relative;
+	}
+	.breadcrumbs-wrapper {
+		margin-bottom: 30px;
+	}
+}

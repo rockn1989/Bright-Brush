@@ -8,23 +8,29 @@
     </div>
 </div>
 
-<div id="callback-modal" class="default-modal uk-flex-top uk-modal" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-    	<button type="button" class="uk-modal-close-default icon-close uk-close" uk-close>
-    	</button>
-        <div class="title-h2">Оставить заявку</div>
-				<form action="" class="application-form">
-					<input type="text" placeholder="Имя">
-					<input type="text" placeholder="Номер телефона" class="js__input-phone">
-					<button type="submit" class="btn">Отправить</button>
-					<label for="politics">
-						<input id="politics" type="checkbox">
-						<span class="custom-checkbox"></span>
-						<span class="custom-label">
-							Я ознакомлен и согласен с условиями обработки данных
-						</span>
-					</label>
-				</form>
+<div id="callback-modal" class="default-modal callback-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body ">
+			<button type="button" class="uk-modal-close-default icon-close uk-close" uk-close>
+			</button>
+			<div class="modal-body-inner">
+				        <div class="title-h2">Напишите нам</div>
+								<form action="" class="application-form">
+									<fieldset>
+										<input type="text" placeholder="Ваше Имя">
+									</fieldset>
+									<fieldset>
+										<input type="text" placeholder="Телефон для связи" class="js__input-phone">
+									</fieldset>
+									<button type="submit" class="btn">Отправить</button>
+									<label for="politics" class="politics">
+										<input id="politics" type="checkbox">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">
+											Я ознакомлен и согласен с условиями обработки данных
+										</span>
+									</label>
+								</form>
+			</div>
     </div>
 </div>
 

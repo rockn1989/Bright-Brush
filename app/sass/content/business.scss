@@ -3,17 +3,20 @@
 .business-wrapper {
 	position: relative;
 	margin-top: 160px;
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		display: block;
-		height: 100%;
-		width: 0;
-		background-color: rgba(155, 155, 155, 0.05);
-		transition: width .6s ease 1.8s;
-		z-index: 1;
+	.uk-container {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			height: 100%;
+			width: 0;
+			background-color: rgba(155, 155, 155, 0.05);
+			transition: width .6s ease 1.8s;
+			z-index: 1;
+		}
 	}
 }
 
@@ -33,22 +36,42 @@
 	}
 }
 
-.business-patners-list {
-	@include list-reset;
+.business-patners-slider {
 	position: relative;
 	margin-top: 120px;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
 	align-items: center;
 	z-index: 11;
-	li {
-		display: inline-block;
-		vertical-align: top;
+	.slide {
 		filter: grayscale(100%);
 		transition: filter .3s ease;
+		text-align: center;
+		img {
+			display: inline;
+		}
 		&:hover {
 			filter: grayscale(0);
 		}
+	}
+}
+
+
+/*______ Business detail ______*/
+
+.business-detail-wrapper {
+	margin-top: 130px;
+	.breadcrumbs-wrapper {
+		margin-bottom: 30px;
+	}
+	.uk-container {
+		position: relative;
+	}
+}
+
+.service-portfolio-list {
+	text-align: center;
+	img {
+		margin: 0 20px 20px 20px;
+		display: inline-block;
+		vertical-align: top;
 	}
 }

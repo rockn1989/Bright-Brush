@@ -2,6 +2,12 @@
 
 $(function() {	
 
+/*	var callbackModal = $('.default-modal');
+	var close = callbackModal.find('.uk-close');
+	close.on('click', function () {
+		UIkit.modal(callbackModal.hide());
+		$('html').removeClass('uk-modal-page')
+	})*/
 	/*______ Preloader ______*/
 
 	$('.preloader').addClass('loaded');
@@ -9,6 +15,18 @@ $(function() {
 		$('header.header, body').addClass('animate');
 	});
 	
+	/*______ Lazy Load ______*/
+
+	$('.lazy').lazy({
+		scrollDirection: 'vertical',
+		effect: 'fadeIn',
+		visibleOnly: true,
+		placeholder: "../img/ajax-loader.gif",
+		onError: function(element) {
+				console.log('error loading ' + element.data('src'));
+		}
+	});
+
 
 	/*______ Показывать форму на мобильных устройствах ______*/
 
@@ -99,5 +117,6 @@ $(function() {
 	/*______ Полифил для SVG ______*/
 
 	/*svg4everebody();*/
+
 
 });

@@ -9,6 +9,12 @@ body {
 		background-color: transparent;
 	}
 	&.animate {
+		.header {
+			.uk-container {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
 		.main-play-btn-wrapper {
 			transform: translateX(0);
 			opacity: 1;

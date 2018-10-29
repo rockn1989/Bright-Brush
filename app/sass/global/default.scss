@@ -102,12 +102,19 @@ html.uk-touch {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		transition: all .3s ease;
+		@media (min-width: $mob-xs) {
+			width: 150px;	
+			height: 150px;
+		}
+		@media (min-width: $tablet-w) {
+			width: 350px;
+			height: 350px;
+		};
 	}
 	&.loaded {
 		opacity: 0;
 		z-index: -1;
 		img {
-			transform: translate(-60%, -50%);
 			opacity: 0;
 		}
 	}

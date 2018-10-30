@@ -15,9 +15,9 @@
 
 .services-list-wrapper {
 	position: relative;
-	margin-top: -80px;
-	margin-bottom: 30px;
+  margin: -80px auto 30px;
 	padding: 150px 0 50px;
+  max-width: 1385px;
 	&:after {
 		content: '';
 		position: absolute;

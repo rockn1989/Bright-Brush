@@ -35,3 +35,18 @@
 		transform: translate(-50%, -50%);
 	}
 }
+
+
+.video-modal {
+	.uk-modal-body {
+		padding: 0;
+		width: 100%;
+		max-width: 600px;
+	}
+	iframe,
+	video {
+		width: 100%;
+		max-width: 100%;
+		min-height: 400px;
+	}
+}

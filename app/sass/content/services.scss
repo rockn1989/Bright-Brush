@@ -3,6 +3,9 @@
 
 .services-wrapper {
 	margin-top: 75px;
+	.breadcrumbs-wrapper {
+		margin-bottom: 30px;
+	}
 	.text-block {
 		padding-top: 8px;
 	}
@@ -38,7 +41,7 @@
 	column-count: 4;
 	z-index: 50;
 	li {
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		a {
 			line-height: 20px;
 			font-weight: 400;

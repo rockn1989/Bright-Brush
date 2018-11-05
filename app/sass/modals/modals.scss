@@ -7,6 +7,12 @@
 		margin: 0 0 0 auto;
 		height: 100%;
 		width: 50%;
+		@media (min-width: $mob-xs) {
+			width: 100%;
+		}
+		@media (min-width: $tablet-w) {
+			width: 50%;
+		};
 		.uk-close {
 			right: auto;
 			top: 20px;
@@ -19,7 +25,14 @@
 		}
 	}
 	.title-h2 {
-		margin-bottom: 70px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 30px;
+			font-size: 36px;
+		}
+		@media (min-width: $desk-w) {
+			margin-bottom: 70px;
+			font-size: 48px;
+		};
 	}
 	.btn {
 		margin-top: 40px;
@@ -33,6 +46,9 @@
 		width: 100%;
 		max-width: 500px;
 		transform: translate(-50%, -50%);
+		@media (min-width: $mob-xs) {
+			padding: 0 15px;
+		}
 	}
 }
 

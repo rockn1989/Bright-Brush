@@ -1,7 +1,15 @@
 /*______ Page Blog ______*/
 
 .blog-wrapper {
-	margin-top: 130px;
+	@media (min-width: $mob-xs) {
+		margin-top: 70px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 100px;
+	};
+	@media (min-width: $desk-w) {
+		margin-top: 130px;
+	};
 	.text-block {
 		padding-top: 8px;
 	}
@@ -11,7 +19,15 @@
 }
 
 .blog-list {
-	margin-top: 130px;
+	@media (min-width: $mob-xs) {
+		margin-top: 70px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 100px;
+	};
+	@media (min-width: $desk-w) {
+		margin-top: 130px;
+	};
 }
 
 

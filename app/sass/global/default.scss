@@ -24,21 +24,21 @@ svg {
   transition: fill .3s linear;
 }
 
-html.uk-touch {
-	body {
-		*.uk-invisible {
-			display: block !important;
-			opacity: 1 !important;
-			animation: none !important;
-			visibility: visible !important;
-		}
-		[class*=uk-animation-] {
-			@media (min-width: $mob-xs) {
-				animation: none;
-			};
+/* html {
+	@media (min-width: 0) and (max-width: 767px) {
+		body {
+			*.uk-invisible {
+				display: block !important;
+				opacity: 1 !important;
+				animation: none !important;
+				visibility: visible !important;
+			}
+			[class*=uk-animation-] {
+					animation: none;
+			}
 		}
 	}
-}
+} */
 
 .uk-container {
   margin: 0 auto;
@@ -47,9 +47,9 @@ html.uk-touch {
   &--large {
   	max-width: 1800px;
   }
-  @media (min-width: $desk-w) {
+  @media (min-width: $mob-xs) {
   	padding: 0 15px;
-  };
+  }
 }
 
 .uk-lightbox {

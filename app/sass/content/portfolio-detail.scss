@@ -2,6 +2,15 @@
 
 .portfolio-detail {
 	margin-top: 150px;
+	@media (min-width: $mob-xs) {
+		margin-top: 70px;
+	}
+	@media (min-width: $desk-w) {
+		margin-top: 100px;
+	};
+	@media (min-width: $desk-w) {
+		padding-top: 150px;
+	};
 	.breadcrumbs-wrapper {
 		margin-bottom: 30px;
 	}

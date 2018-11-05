@@ -11,7 +11,13 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(155, 155, 155, 0.09);
-		transform: translate(100px, 85px)
+		transform: translate(100px, 85px);
+		@media (min-width: $mob-xs) {
+			display: none;
+		}
+		@media (min-width: $desk-w) {
+			display: block;
+		};
 	}
 	.slider {
 		position: relative;
@@ -44,6 +50,14 @@
 	right: 0;
 	z-index: 100;
 	@include clearfix;
+	@media (min-width: $mob-xs) {
+		right: 50%;
+		transform: translateX(50%);
+	}
+	@media (min-width: $tablet-w) {
+		right: 0;
+		transform: translateX(0);
+	};
 	&>div {
 		display: inline-block;
 		vertical-align: top;
@@ -61,6 +75,14 @@
 	position: absolute;
 	bottom: -50px;
 	right: 55px;
+	@media (min-width: $mob-xs) {
+		right: 50%;
+		transform: translateX(50%);
+	}
+	@media (min-width: $tablet-w) {
+		right: 55px;
+		transform: translateX(0);
+	};
 	&>div {
 		display: inline-block;
 		vertical-align: top;
@@ -78,6 +100,26 @@
 
 .business-patners-slider  {
 	.slide {
-		
+		text-align: center;
+		padding: 0 10px;	
+	}
+	.slick-prev,.slick-next {
+		z-index: 200;
+		&:before {
+			content: '';
+			font-family: none;
+			font-size: 0;
+			opacity: 1;
+		}
+		i {
+			font-size: 20px;
+			color: #000000;
+		}
+	}
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+		right: 0;
 	}
 }

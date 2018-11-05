@@ -5,10 +5,15 @@ body {
 	background-color: #fafafa;
 	overflow-x: hidden;
 	&.main-page {
-		overflow: hidden;
 		background-color: transparent;
+		@media (min-width: $mob-xs) {
+			overflow: unset;
+		}
+		@media (min-width: $tablet-w) {
+			overflow: hidden;
+		};
 	}
-	&.animate {
+	&.is-ready {
 		.header {
 			.uk-container {
 				opacity: 1;
@@ -82,6 +87,9 @@ body {
 		height: 100%;
 		z-index: 100;
 		color: #ffffff;
+		@media (min-width: $mob-xs) {
+			padding-top: 100px;
+		}
 		@media (min-width: $desk-w) {
 			padding-top: 140px;
 		};
@@ -102,12 +110,26 @@ body {
 			}
 		}
 		.title-h1 {
-			font-size: 80px;
-			line-height: 100px;
-			color: #ffffff;
+
 			transform: translateY(75px);
 			opacity: 0;
 			transition: transform 1.15s 1.3s, opacity 1.15s 1.3s ease;
+			@media (min-width: $mob-xs) {
+				margin-top: 200px;
+				font-size: 34px;
+				line-height: 45px;
+				color: #000000;
+				text-align: center;
+			}
+			@media (min-width: $tablet-w) {
+				margin-top: 0;
+				text-align: left;
+			};
+			@media (min-width: $tablet-w) {
+				color: #ffffff;
+				font-size: 50px;
+				line-height: 70px;
+			};
 			@media (min-width: $desk-w) {
 				font-size: 50px;
 				line-height: 70px;
@@ -122,6 +144,18 @@ body {
 			transform: translateY(75px);
 			opacity: 0;
 			transition: transform 1.15s 1.5s, opacity 1.15s 1.5s ease;
+			@media (min-width: $mob-xs) {
+				margin-bottom: 35px;
+				max-width: 100%;
+				color: #000000;
+				text-align: center;
+			}
+			@media (min-width: $tablet-w) {
+				margin-bottom: 0;
+				max-width: 50%;
+				color: #ffffff;
+				text-align: left;
+			};
 			@media (min-width: $desk-w) {
 				margin: 20px 0 50px;
 			};
@@ -133,6 +167,17 @@ body {
 			transform: translateY(75px);
 			opacity: 0;
 			transition: transform 1.15s 1.9s, opacity 1.15s 1.9s ease;
+			@media (min-width: $mob-xs) {
+				margin-bottom: 35px;
+				text-align: center;
+			}
+			@media (min-width: $tablet-w) {
+				margin: 30px 0;
+				text-align: left;
+			};
+			@media (min-width: $desk-w) {
+				margin-top: 0;
+			};
 		}
 		.btn {
 			transition: background-color .3s ease;
@@ -148,12 +193,20 @@ body {
 			transform: translateY(75px);
 			opacity: 0;
 			transition: transform 1.15s 2.1s, opacity 1.15s 2.1s ease;
+			@media (min-width: $mob-xs) {
+				position: static;
+				margin-bottom: 30px;
+				color: #000000;
+			}
 			@media (min-width: $desk-w) {
 				text-indent: -9999px;
 				width: 1px;
 				visibility: hidden;
+				color: #ffffff;
 			};
 			@media (min-width: 1600px) {
+				margin-bottom: 0;
+				position: absolute;
 				text-indent: 0;
 				width: auto;
 				visibility: visible;
@@ -166,11 +219,19 @@ body {
 	}
 	.bg-phone {
 		position: absolute;
-		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
 		z-index: 50;
+		@media (min-width: $mob-xs) {
+			position: static;
+			margin-bottom: -270px;
+			height: 320px;
+		}
+		@media (min-width: $tablet-w) {
+			position: absolute;
+			top: 0;
+			height: 100vh;
+		};
 		img {
 			width: 100%;
 			height: 100%;
@@ -184,6 +245,14 @@ body {
 		transform: translateX(100%);
 		opacity: 0;
 		transition: transform 1.15s .7s, opacity 1.15s 1.1s ease;
+		@media (min-width: $mob-xs) {
+			right: 50%;
+			transform: translateX(50%) !important;
+		}
+		@media (min-width: $tablet-w) {
+			right: 0;
+			transform: translateX(0%) !important;
+		};
 		@media (min-width: $desk-w) {
 			right: 30px;
 		};
@@ -197,16 +266,34 @@ body {
 /*______ Page Text ______*/
 
 .text-page {
+	@media (min-width: $mob-xs) {
+		margin-top: 70px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 60px;
+	};
 	.uk-container {
 		position: relative;
 	}
 	.breadcrumbs-wrapper {
-		margin: 60px auto 30px;
+		margin: 0 auto 30px;
+	}
+	h1,.title-h1 {
+		max-width: 560px;
+		margin: 0 auto 40px;
 	}
 	p {
 		margin: 0 auto 80px;
 		max-width: 900px;
 		font-weight: 300;
 		text-align: center;
+	}
+	.backpage-btn {
+		@media (min-width: $mob-xs) {
+			top: -90px;
+		}
+		@media (min-width: $tablet-w) {
+			top: -40px;
+		};
 	}
 }

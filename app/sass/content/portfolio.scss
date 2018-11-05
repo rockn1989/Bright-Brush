@@ -2,6 +2,12 @@
 
 .portfolio-wrapper {
 	margin-top: 75px;
+	@media (min-width: $mob-xs) {
+		margin-top: 40px;
+	}
+	@media (min-width: $desk-w) {
+		margin-top: 70px;
+	};
 	.breadcrumbs {
 		margin: 0 0 30px;
 	}
@@ -33,6 +39,12 @@
 		background-color: rgba(155, 155, 155, 0.05);
 		transition: width .8s ease 1.8s;
 		z-index: 1;
+		@media (min-width: $mob-xs) {
+			display: none;
+		}
+		@media (min-width: $tablet-w) {
+			display: block;
+		};
 	}
 	a {
 		@include anim-border;

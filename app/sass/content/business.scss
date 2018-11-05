@@ -3,6 +3,18 @@
 .business-wrapper {
 	position: relative;
 	margin-top: 160px;
+	@media (min-width: $mob-xs) {
+		margin-top: 40px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 70px;
+	};
+	@media (min-width: $desk-w) {
+		margin-top: 75px;
+	};
+	.breadcrumbs-wrapper {
+		margin-bottom: 20px;
+	}
 	.uk-container {
 		position: relative;
 		&:after {
@@ -16,6 +28,12 @@
 			background-color: rgba(155, 155, 155, 0.05);
 			transition: width .6s ease 1.8s;
 			z-index: 1;
+			@media (min-width: $mob-xs) {
+				display: none;
+			}
+			@media (min-width: $desk-w) {
+				display: block;
+			};
 		}
 	}
 }
@@ -25,6 +43,17 @@
 	margin-left: 35%;
 	position: relative;
 	z-index: 10;
+	@media (min-width: $mob-xs) {
+		margin-left: 0;
+		margin-top: 50px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 0;
+		margin-left: 5%;
+	};
+	@media (min-width: $desk-w) {
+		margin-left: 35%;
+	};
 	li {
 		a {
 			color: $orange;
@@ -60,6 +89,15 @@
 
 .business-detail-wrapper {
 	margin-top: 130px;
+	@media (min-width: $mob-xs) {
+		margin-top: 70px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 100px;
+	};
+	@media (min-width: $desk-w) {
+		margin-top: 130px;
+	};
 	.breadcrumbs-wrapper {
 		margin-bottom: 30px;
 	}

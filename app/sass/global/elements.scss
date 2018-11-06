@@ -231,9 +231,23 @@ table {
 		&.scale-140deg {
 			margin-top: -150px;
 			margin-bottom: 70px;
-			img {
-				transform: translate(45px, 75px);
+			@media (min-width: $mob-xs) {
+				margin-top: 40px;
+				margin-bottom: 30px;
+				img {
+					transform: translate(0, 0);
+				}
 			}
+			@media (min-width: $tablet-w) {
+				margin-top: -40px;
+			};
+			@media (min-width: 1366px) {
+				margin-top: -150px;
+				margin-bottom: 70px;
+				img {
+					transform: translate(45px, 75px);
+				}
+			};
 			&:before {
 				width: 100%;
 			}

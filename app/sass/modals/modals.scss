@@ -2,11 +2,19 @@
 
 .default-modal {
 	padding: 0;
+	overflow-x: hidden;
+	&.uk-open {
+		.uk-modal-dialog {
+			transform: translateX(0);
+		}
+	}
 	.uk-modal-dialog {
 		position: relative;
 		margin: 0 0 0 auto;
 		height: 100%;
 		width: 50%;
+		transform: translateY(0);
+		transform: translateX(100%);
 		@media (min-width: $mob-xs) {
 			width: 100%;
 		}

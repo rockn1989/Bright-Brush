@@ -108,10 +108,4 @@ $(function() {
 	
 	objectFitImages();
 
-
-	/*______ Полифил для SVG ______*/
-
-	/*svg4everebody();*/
-
-
 });

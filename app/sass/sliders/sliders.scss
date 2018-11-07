@@ -25,7 +25,17 @@
 	}
 	.slide {
 		overflow: hidden;
+		@media (min-width: $mob-xs) {
+			text-align: center;
+		}
+		@media (min-width: $tablet-w) {
+			max-height: 450px;
+		};
+		@media (min-width: $desk-w) {
+			max-height: none;
+		};
 		img {
+			display: inline;
 		}
 		&.imgPlay {
 			img {

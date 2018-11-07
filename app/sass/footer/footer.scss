@@ -1,1 +1,21 @@
 /*______ PAGE FOOTER ______*/
+
+.footer {
+	padding: 30px 2.5%;
+	color: rgba(0, 0, 0, 0.8);
+	@include clearfix;
+}
+
+.copyright {
+	@media (min-width: $mob-s) {
+		float: left;
+	};
+}
+.dev {
+	a {
+		color: rgba(0, 0, 0, 0.8);
+	}
+	@media (min-width: $mob-s) {
+		float: right;
+	};
+}

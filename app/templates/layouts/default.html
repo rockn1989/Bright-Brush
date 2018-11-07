@@ -6,9 +6,9 @@
 {% include "../includes/header.html" %}
 	
 {% block content %}{% endblock %}
-
-<!-- {% include "../includes/footer.html" %} -->
-
+{% if main is not defined %}
+{% include "../includes/footer.html" %}
+{% endif %}
 {% include "../includes/modals.html" %}
 
 {% include "../includes/scripts.html" %}

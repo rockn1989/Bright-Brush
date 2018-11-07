@@ -55,8 +55,11 @@
 		max-width: 500px;
 		transform: translate(-50%, -50%);
 		@media (min-width: $mob-xs) {
-			padding: 0 15px;
+			padding: 0 30px;
 		}
+		@media (min-width: $desk-w) {
+			padding: 0 15px;
+		};
 	}
 }
 

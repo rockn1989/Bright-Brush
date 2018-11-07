@@ -4,6 +4,7 @@
 	margin-top: 150px;
 	@media (min-width: $mob-xs) {
 		margin-top: 70px;
+		margin-bottom: 50px;
 	}
 	@media (min-width: $desk-w) {
 		margin-top: 100px;
@@ -20,6 +21,35 @@
 	.text-block {
 		@media (min-width: $desk-w) {
 			padding-right: 15%;
+		};
+	}
+}
+
+.detail-custom-grid {
+	&:before {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	@include clearfix;
+	&>div {
+		@media (min-width: $mob-xs) {
+			width: 100%;
+		}
+		@media (min-width: $desk-w) {
+			width: 50%;
+		};
+	}
+	.left-block {
+		float: left;
+		@media (min-width: $mob-xs) {
+			margin-top: 80px;
+		}
+	}
+	.right-block {
+		float: right;
+		@media (min-width: $desk-w) {
+			margin-top: -150px;
 		};
 	}
 }

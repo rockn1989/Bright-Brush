@@ -4,10 +4,12 @@ $(function() {
 
 	/*______ Preloader ______*/
 
-	$('.preloader').addClass('loaded');
-	$('.preloader').on('transitionend', function () {
-		$('header.header, body').addClass('is-ready');
-	});
+	setTimeout(function () {
+		$('.preloader').addClass('loaded');
+		$('.preloader').on('transitionend', function () {
+			$('header.header, body').addClass('is-ready');
+		});
+	}, 800);
 	
 	/*______ Lazy Load ______*/
 
@@ -92,17 +94,6 @@ $(function() {
 		self.toggleClass('open');
 		siblingsList.stop().slideToggle('350');
 	});
-
-
-	/*______ Отключение UIKIT анимации для мобильных устройств ______*/
-
-
-/*	UIkit.on('beforeready.uk.dom', function () {
-		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
-			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
-		};
-	});*/
-
 
 	/*______ Полифил для Object-fit ______*/
 	

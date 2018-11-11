@@ -180,6 +180,9 @@ table {
 	font-weight: 300;
 	line-height: 28px;
 	z-index: 400;
+	a {
+		color: $black;
+	}
 }
 
 .bold-link {

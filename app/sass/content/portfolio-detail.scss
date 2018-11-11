@@ -45,6 +45,9 @@
 		@media (min-width: $mob-xs) {
 			margin-top: 80px;
 		}
+		@media (min-width: $desk-w) {
+			margin-top: 0;
+		};
 	}
 	.right-block {
 		float: right;

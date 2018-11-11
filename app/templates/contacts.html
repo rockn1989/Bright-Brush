@@ -1,0 +1,32 @@
+{% extends "layouts/default.html" %}
+{% set title="Контакты" %}
+{% set bread = ["Главная", "Контакты"] %}
+{% set textAlign = "uk-text-left" %}
+{% block content %}
+
+<div class="content">
+	<div class="contacts-wrapper">
+		<div class="uk-container">
+			{% include 'includes/breadcrumbs.html' %}
+			<div class="uk-grid">
+				<div class="uk-width-1-2@m">
+					<h1 class="title-h1 uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1200">Контакты</h1>
+				</div>
+				<div class="uk-width-1-2@m">
+					<div class="text-block uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 1400">
+						<p>Телефон: <a href="tel:+74957403096">+7 (495) 740 30 96</a>	 (многоканальный)</p>
+						<p>Мобильный телефон: <a href="+79261414569">+7 (926) 14-14-568</a> </p>
+						<p>Почта: <a href="mailto:info@bbrush.ru">info@bbrush.ru</a></p>
+						<p>ежедневно с 09:00 до 21:00 </p>
+						<p>Адрес: 109004 Москва, ул. Николоямская, 43, корп.4, офис 6</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="map" class="map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad07c39f53f399d510e56c86ce541b56867e432ef3fdca4ee7c3bafe5340c545e&amp;width=100%25&amp;height=670&amp;lang=ru_RU&amp;scroll=true"></script>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -21,8 +21,6 @@ body {
 			}
 		}
 		.main-play-btn-wrapper {
-			transform: translateX(0);
-			opacity: 1;
 			@media (min-width: $mob-xs) {
 				right: 50%;
 				transform: translateX(50%);
@@ -30,6 +28,7 @@ body {
 			@media (min-width: $tablet-w) {
 				right: 30px;
 				transform: translateX(0);
+				opacity: 1;
 			};
 		}
 		.title-h1 {
@@ -82,8 +81,12 @@ body {
 .content {
 	padding: 70px 0 20px;
 	p {
+		margin-bottom: 10px;
 		color: rgba(0, 0, 0, 0.8);
 		line-height: 30px;
+	}
+	*+p {
+		margin-top: 15px;
 	}
 }
 
@@ -206,11 +209,13 @@ body {
 				margin-bottom: 30px;
 				color: #000000;
 			}
+			@media (min-width: $tablet-w) {
+				color: #ffffff;
+			};
 			@media (min-width: $desk-w) {
 				text-indent: -9999px;
 				width: 1px;
 				visibility: hidden;
-				color: #ffffff;
 			};
 			@media (min-width: 1600px) {
 				margin-bottom: 0;
@@ -250,12 +255,17 @@ body {
 		position: absolute;
 		top: 0;
 		right: 0;
-		transform: translateX(100%);
 		opacity: 0;
 		transition: transform 1.15s .7s, opacity 1.15s 1.1s ease;
+		@media (min-width: $mob-xs) {
+			opacity: 1;
+			transform: translateX(50%);
+			right: 50%;
+		}
 		@media (min-width: $tablet-w) {
 			right: 0;
 			transform: translateX(100%);
+			opacity: 0;
 		};
 		@media (min-width: $desk-w) {
 			right: 30px;
@@ -300,4 +310,35 @@ body {
 			top: -40px;
 		};
 	}
+}
+
+
+.contacts-wrapper {
+	@media (min-width: $mob-xs) {
+		margin-top: 40px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-top: 70px;
+	};
+	@media (min-width: $desk-w) {
+		margin-top: 75px;
+	};
+	.breadcrumbs-wrapper {
+		margin-bottom: 30px;
+	}
+}
+
+
+.map {
+	margin: 55px auto 0;
+	padding: 0 2.5%;
+	@media (min-width: $mob-xs) {
+		height: 350px;
+	}
+	@media (min-width: $tablet-w) {
+		height: 500px;
+	};
+	@media (min-width: $desk-w) {
+		height: 670px;
+	};
 }
